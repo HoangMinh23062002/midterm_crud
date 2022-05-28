@@ -6,7 +6,7 @@ class Header extends Component {
             <div>
             <div className="header-dark">
               <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                <div className="container"><a className="navbar-brand" href="#">ROSÉ NEWs</a><button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+                <div className="container"><a className="navbar-brand" href="#">The second's version of guardian</a><button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
                   <div className="collapse navbar-collapse" id="navcol-1">
                     <ul className="nav navbar-nav">
                     <li className="nav-item" role="presentation"><Link to={'/'} className="nav-link" href="#">HOME</Link></li>
@@ -19,7 +19,8 @@ class Header extends Component {
                     </ul>
                     <form className="form-inline mr-auto" target="_self">
                       <div className="form-group"><label htmlFor="search-field"><i className="fa fa-search" /></label><input className="form-control search-field" type="search" name="search" id="search-field" placeholder='Search' /></div>
-                    </form><span className="navbar-text"><a href="#" className="login">Log In</a></span><a className="btn btn-light action-button" role="button" href="#">Sign Up</a></div>
+                    </form>
+                    <span className="navbar-text"><a href="#" className="login"></a></span><a className="btn btn-light action-button" role="button" href="#">Sign Up</a></div>
                 </div>
               </nav>      
           </div>

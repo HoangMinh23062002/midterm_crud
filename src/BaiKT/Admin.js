@@ -30,7 +30,7 @@ class Admin extends Component {
       var id = match.params.id;
       axios({
         method: 'GET',
-        url: `https://61c189b59dbcca0017c81f4a.mockapi.io/api/news/${id}`,
+        url: `https://629191d6cd0c91932b64d9c6.mockapi.io/midterm/${id}`,
         data: null
       }).then(res => {
         var data = res.data;
@@ -45,7 +45,7 @@ class Admin extends Component {
       }).catch(err => {
       });
     }
-    axios.get('https://61c189b59dbcca0017c81f4a.mockapi.io/api/news').then(res => {
+    axios.get('https://629191d6cd0c91932b64d9c6.mockapi.io/midterm').then(res => {
       this.setState({ news: res.data });
     })
     if (this.state.id === '') {
@@ -100,7 +100,7 @@ class Admin extends Component {
       if (this.state.title !== '' && this.state.content !== '' && this.state.author !== '' && this.state.image !== '' && this.state.datecreate !== '') {
         axios({
           method: 'POST',
-          url: `https://61c189b59dbcca0017c81f4a.mockapi.io/api/news`,
+          url: `https://629191d6cd0c91932b64d9c6.mockapi.io/midterm`,
           data: {
             title: this.state.title,
             author: this.state.author,
@@ -120,7 +120,7 @@ class Admin extends Component {
     } else {
       axios({
         method: 'PUT',
-        url: `https://61c189b59dbcca0017c81f4a.mockapi.io/api/news/${this.state.id}`,
+        url: `https://629191d6cd0c91932b64d9c6.mockapi.io/midterm/${this.state.id}`,
         data: {
           title: this.state.title,
           author: this.state.author,
@@ -147,7 +147,7 @@ class Admin extends Component {
     console.log(id);
     axios({
       method: 'DELETE',
-      url: `https://61c189b59dbcca0017c81f4a.mockapi.io/api/news/${id}`,
+      url: `https://629191d6cd0c91932b64d9c6.mockapi.io/midterm/${id}`,
       data: null
     }).then(res => {
       if (res.status === 200) {

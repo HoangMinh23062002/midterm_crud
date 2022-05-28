@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../asset/home.css'
 //import {toast} from 'react-toastify';
 // import Formnhap from './Formnhap';
 // import Formnhap from './Formnhap';
@@ -25,7 +26,7 @@ class Home extends Component {
         var id = match.params.id;
         axios({
         method: 'GET',
-        url :`https://61c189b59dbcca0017c81f4a.mockapi.io/api/news/${id}`,
+        url :`https://629191d6cd0c91932b64d9c6.mockapi.io/midterm/${id}`,
         data : null
        }).then(res =>{
         var data = res.data;
@@ -40,7 +41,7 @@ class Home extends Component {
         }).catch( err =>{
       });
      }
-      axios.get('https://61c189b59dbcca0017c81f4a.mockapi.io/api/news').then(res => {
+      axios.get('https://629191d6cd0c91932b64d9c6.mockapi.io/midterm').then(res => {
         this.setState({ news2:  res.data});
       })
       
@@ -84,40 +85,21 @@ class Home extends Component {
   render(){
     return (
  
-        <div className=''>
+        <div className='container'>
+          <h1>THẾ GIỚI</h1>
+          <div className='d-flex'>
         
         
           
            {  this.state.news2.map((news2s) =>(
         
         
-        <div className="row">
+        <div className="row content-content">
         <div className="col-md-8">
-          <div className="pb-3">
-            <h1>THẾ GIỚI</h1>
-          </div>
-          <div className="row">
+          
+          <div className="row content-content">
             <div className="col-md-6">
-            <img className="card-img-top" src={"./"+news2s.image} alt="Card image cap" />
-                <div className="card-body">
-                <h5 className="card-title">{news2s.title}</h5>
-                  <div className="row">
-                    <div className="col-6">
-                        {
-                          news2s.datecreate
-                        }
-                    </div>
-                    <div className="col-6">
-                        {
-                          news2s.author
-                        }
-                    </div>
-                  </div>
-                  <h8 className="card-title">{news2s.content}</h8>
-                </div>
-                </div>
-            <div className="col-md-6">
-            <img className="card-img-top" src={"./"+news2s.image} alt="Card image cap" />
+            <img className="card-img-top" style={{width: "220px"}} src={"./"+news2s.image} alt="Card image cap" />
                 <div className="card-body">
                 <h5 className="card-title">{news2s.title}</h5>
                   <div className="row">
@@ -135,16 +117,15 @@ class Home extends Component {
                   <h8 className="card-title">{news2s.content}</h8>
                 </div>
             </div>
+            
           </div>
         </div>
-        <div className="col-md-4">.col-md-4</div>
+        <div className="col-md-4"></div>
       </div>
       
            ))}
-           
            </div>
-          
-                             
+           </div>                    
         );
   }
 }

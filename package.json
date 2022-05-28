@@ -6,7 +6,6 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
-        "axios": "^0.19.2",
         "bootstrap": "^5.2.0-beta1",
         "react": "^16.13.1",
         "react-axios": "^2.0.3",
@@ -18,7 +17,7 @@
         "uuid": "^8.3.0"
     },
     "scripts": {
-        "start": "set PORT=4000 && react-scripts start",
+        "start": "react-scripts --openssl-legacy-provider start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject"
